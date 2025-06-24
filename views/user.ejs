@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALL USERS</title>
+    <style>
+        div{
+            width:100%;
+            height:100px;
+            border:2px solid black;
+            line-height:1.5;
+            margin-bottom:5px;
+        }
+    </style>
+</head>
+<body>
+    <%for (let i=0; i<data.length;i++){%>
+        <div>
+        ID: <%=data[i].id%> <br>
+        Username: <%=data[i].username%> <br>
+        Email: <%= data[i].email%> <br>
+        <button class="btns" onclick='window.location.href=`http://localhost:3000/user/<%=data[i].id%>`'>Edit</button>
+    </div>
+    <%}%>
+    <!-- <script>
+        let btns = document.querySelectorAll(".btns");
+        for(btn of btns){
+            btn.addEventListener("click",()=>{
+                window.location.href=`http://localhost:3000/user/`;
+            })
+        }
+    </script> -->
+</body>
+</html>

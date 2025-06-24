@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Requested Data</title>
+</head>
+<body>
+    <h2>Edit the Data:</h2>
+    <h3>ID: <%=data.id%></h3>
+    <h3>Username:<%=data.username%></h3>
+    <h3>Email: <%=data.email%></h3>
+    <h4>You can change your username</h4>
+    <form method="post" action="http://localhost:3000/user/<%=data.id%>?_method=PATCH">
+        <input id="username" name="username" type="text" value="<%=data.username%>">
+        <button>Submit</button>
+    </form>
+    
+
+</body>
+</html>
